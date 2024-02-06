@@ -13,6 +13,8 @@ app.get("/", (req, res) => {
 app.post("/api/c/payment", (req, res) => {
   const paymentDetails = req.body;
 
+  console.log(paymentDetails);
+
   res.send(paymentDetails);
 });
 
