@@ -10,7 +10,15 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.post("/api/c/payment", (req, res) => {
+app.post("/api/payment/confirmation", (req, res) => {
+  const paymentDetails = req.body;
+
+  console.log(paymentDetails);
+
+  res.send(paymentDetails);
+});
+
+app.post("/api/payment/validation", (req, res) => {
   const paymentDetails = req.body;
 
   console.log(paymentDetails);
